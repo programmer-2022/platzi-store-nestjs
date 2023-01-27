@@ -31,7 +31,8 @@
     "class-validator": "^0.13.2",
     "joi": "^17.7.0",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "swagger-ui-express": "^4.6.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
@@ -71,6 +72,9 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node"    
+  },
+  "engines": {
+    "node": "18.x"
   }
 }

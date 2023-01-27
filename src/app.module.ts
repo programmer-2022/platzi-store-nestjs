@@ -1,17 +1,14 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import * as Joi from 'joi';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-
 import { UsersModule } from './modules/users';
 import { ProductsModule } from './modules/products';
 import { DatabaseModule } from './modules/database';
-
 import { environments } from './environments';
 import config from './environments/config';
-
-import * as Joi from 'joi';
 
 @Module({
   imports: [
@@ -24,6 +21,7 @@ import * as Joi from 'joi';
         API_KEY: Joi.string().required(),
         DATABASE_NAME: Joi.string().required(),
         DATABASE_PORT: Joi.number().required(),
+        PORT: Joi.number().required(),
       }),
     }),
     UsersModule,
