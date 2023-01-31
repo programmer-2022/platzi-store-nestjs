@@ -7,5 +7,13 @@ export default registerAs('config', () => {
       port: process.env.DATABASE_PORT,
     },
     apiKey: process.env.API_KEY,
+    mongo: {
+      dbName: process.env.MONGO_DB_NAME,
+      port: parseInt(process.env.MONGO_PORT, 10),
+      host: process.env.MONGO_HOST,
+      connection: process.env.MONGO_CONNECTION,
+      user: process.env.MONGO_USER,
+      password: process.env.MONGO_PASSWORD,
+    },
   };
 });
